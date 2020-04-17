@@ -1,5 +1,5 @@
 
-# Homework-8 
+# Homework-08
 ## Project Description:
 ### Generates a Readme
 ## Table of Contents:
@@ -12,15 +12,15 @@
 * [License](#license)
 * [Test] (#test)
 ## Github Project: 
-### https://github.com/mauraparker02/homework-8-
+### https://github.com/mauraparker02/homework-08
 ## Live Link: 
-### https://mauraparker02.github.io/homework-8-/
+### https://mauraparker02.github.io/homework-08/
 ## Github Email: 
-### mauraparker02@gmail.com
+### email@gmail.com
 ## Installation:
-### By running nodes
+### Run Nodes
 ## Usage:
-### by running nodes
+### Run Nodes 
 ## Credits:
 ### Maura Parker
 ## License:
