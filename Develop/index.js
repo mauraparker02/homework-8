@@ -13,76 +13,123 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const util = require("util");
+const util = require("util"); 
 
-const writeFileAsync = util.promisify(fs.writeFile);
+const writeFileAsync = util.promisify(fs.writeFile); //ES6 for .this so that 
 
 //user input inquier 
 function promptUser() {
     return inquirer.prompt([
         {
             type: "input",
-            name: "Title",
-            message: "Title of application?"
+            name: "title",
+            message: "What's the title of the application?"
         },
         {
             type: "input",
-            name: "Description",
-            message: "What does your application do?"
+            name: "description",
+            message: "What does the application do?"
         },
         {
             type: "input",
-            name: "Table of Contents",
-            message: "What are all the sections of your application?"
+            name: "tableOfContents",
+            message: "What are all the sections of the application?"
         },
         {
             type: "input",
-            name: "Installation",
-            message: "Installation information?"
+            name: "installation",
+            message: "How do you install this application?"
         },
         {
             type: "input",
-            name: "Usage",
+            name: "usage",
             message: "How do you use the application"
         },
         {
             type: "input",
-            name: "License",
-            message: "License for application."
+            name: "license",
+            message: "What is the copyright information for your application?"
         },
         {
             type: "input",
-            name: "Contributing",
-            message: "Who is contributing"
+            name: "contributing",
+            message: "Who needs contributing credit?"
         },
         {
             type: "input",
-            name: "Tests",
-            message: "What are tests you've run on your application"
+            name: "tests",
+            message: "what are tests you've run on your application"
         },
         {
             type: "input",
-            name: "Questions",
+            name: "questions",
             message: "?"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your Github email:"
+        },
+        {
+            type: "input",
+            name: "username",
+            message: "What's your Github username:"
         },
     ]);
 }
 
+//then you want to define writefileASync then use template literal 
 // this function will generate the Readme insert template here and template literal to return a readme template filled in 
 
-function generateREADME(answers) {
+//Generate the README by creating a template and filling it in with user answers//
+function generateReadMe(answer) {
     return `
-    ```
-    "GIVEN the developer has a GitHub profile and a repository"
-    
-    "WHEN prompted for the developer's GitHub username and repo specific information"
-    
-    "THEN a README for the repo is generated"
-    ```
-    - - -`;
-}
+# ${answer.title}
+## Project Description:
+### ${answer.description}
+## Table of Contents:
+* [Github Project] (#github-project)
+* [Live Link] (#live-link)
+* [Profile Picture] (#profile-picture)
+* [Github Email] (#githum-email)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credit] (#credits)
+* [License](#license)
+* [Test] (#test)
+## Github Project: 
+### https://github.com/${answer.username}/${answer.title.toLowerCase().split(" ").join("-")}
+## Live Link: 
+### https://${answer.username}.github.io/${answer.title.toLowerCase().split(" ").join("-")}/
+## Github Email: 
+### ${answer.email}
+## Installation:
+### ${answer.installation}
+## Usage:
+### ${answer.usage}
+## Credits:
+### ${answer.contributing}
+## License:
+### ${answer.license}
+## Test:
+### ${answer.test}
+`;
+  }
 
-//getting application to run Async
+  promptUser()
+  .then(function (answers) {
+    const readMe = generateReadMe(answers); 
+    console.log(readMe);
+    return writeFileAsync("README.md", readMe);
+  })
+  .then(function () {
+    console.log("Successful");
+  })
+  .catch(function (err) { 
+    console.log(err);
+  });
+
+  //getting application to run Async
 
 // async function init() {
 //     console.log("hi")
@@ -122,7 +169,13 @@ function generateREADME(answers) {
 
 //  The application will be invoked with the following command:
 
-// ```sh
+
+//``` is README syntax meaning you are about to present a command 
+    //shell is the terminal with different versions of the command line prompt 
+
+//a markdown file is like an HTML file 
+
+// ```sh 
 // node index.js
 // ```
 
