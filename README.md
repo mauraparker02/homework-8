@@ -1,29 +1,28 @@
 
-# Homework-8
+# Homework-8 
 ## Project Description:
-### Generates a ReadMe
+### Generates a Readme
 ## Table of Contents:
 * [Github Project] (#github-project)
-* [Live Link] (#live-link)
-* [Profile Picture] (#profile-picture)
-* [Github Email] (#githum-email)
+* [link] (#live-link)
+* [email] (#githum-email)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credit] (#credits)
+* [contributing] (#credits)
 * [License](#license)
 * [Test] (#test)
 ## Github Project: 
-### https://github.com/mauraparker02/homework-8
+### https://github.com/mauraparker02/homework-8-
 ## Live Link: 
-### https://mauraparker02.github.io/homework-8/
+### https://mauraparker02.github.io/homework-8-/
 ## Github Email: 
-### mauraparker02
+### mauraparker02@gmail.com
 ## Installation:
-### (Installation information) 
+### By running nodes
 ## Usage:
-### you use the application by filling out Userprompts in nodes 
+### by running nodes
 ## Credits:
-### Maura Parker 
+### Maura Parker
 ## License:
 ### © Maura Parker 2020
 ## Test:

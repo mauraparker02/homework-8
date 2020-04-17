@@ -89,12 +89,11 @@ function generateReadMe(answer) {
 ### ${answer.description}
 ## Table of Contents:
 * [Github Project] (#github-project)
-* [Live Link] (#live-link)
-* [Profile Picture] (#profile-picture)
-* [Github Email] (#githum-email)
+* [link] (#live-link)
+* [email] (#githum-email)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Credit] (#credits)
+* [contributing] (#credits)
 * [License](#license)
 * [Test] (#test)
 ## Github Project: 
